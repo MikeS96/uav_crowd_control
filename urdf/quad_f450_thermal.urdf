@@ -496,16 +496,16 @@
           <near>0.05</near>
           <far>15000</far>
         </clip>
-        <noise>
-          <type>gaussian</type>
-          <!-- Noise is sampled independently per pixel on each frame.
+        <!-- <noise>
+            <type>gaussian</type>
+             Noise is sampled independently per pixel on each frame.
                  That pixel's noise value is added to each of its color
-                 channels, which at that point lie in the range [0,1]. -->
-          <mean>0.0</mean>
-          <stddev>0.007</stddev>
-        </noise>
+                 channels, which at that point lie in the range [0,1].
+            <mean>${noise_mean}</mean>
+            <stddev>${noise_stddev}</stddev>
+          </noise>  -->
       </camera>
-      <plugin filename="libgazebo_ros_camera.so" name="_camera_quad_f450_thermal_controller">
+      <plugin filename="libgazebo_ros_thermal_camera.so" name="_camera_quad_f450_thermal_controller">
         <robotNamespace></robotNamespace>
         <alwaysOn>true</alwaysOn>
         <updateRate>30.0</updateRate>
