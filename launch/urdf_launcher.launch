@@ -5,7 +5,7 @@
     <!-- vehicle model and world -->
     <arg name="est" default="ekf2"/>
     <arg name="vehicle" default="quad_f450_thermal"/>
-    <arg name="world" default="$(find mavlink_sitl_gazebo)/worlds/grass_pad.world"/>
+    <arg name="world" default="$(find mavlink_sitl_gazebo)/worlds/thermal.world"/>
     <!-- gazebo configs -->
     <arg name="gui" default="true"/>
     <arg name="debug" default="false"/>
