@@ -21,7 +21,7 @@
           <geometry>
             <plane>
               <normal>0 0 1</normal>
-              <size>300 300</size>
+              <size>100 100</size>
             </plane>
           </geometry>
           <surface>
@@ -83,79 +83,13 @@
       <elevation>0</elevation>
       <heading_deg>0</heading_deg>
     </spherical_coordinates>
-    <state world_name='default'>
-      <sim_time>912 165000000</sim_time>
-      <real_time>45 267730831</real_time>
-      <wall_time>1586623482 154773530</wall_time>
-      <iterations>11299</iterations>
-      <model name='apartment'>
-        <pose frame=''>-35.9418 -27.1091 0 0 -0 0.545002</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose frame=''>-35.9418 -27.1091 0 0 -0 0.545002</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='apartment_0'>
-        <pose frame=''>36.1685 -25.641 0 0 0 -0.530663</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose frame=''>36.1685 -25.641 0 0 0 -0.530663</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='fire_station'>
-        <pose frame=''>-2.08121 38.9615 0 0 -0 3.12501</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose frame=''>-2.08121 38.9615 0 0 -0 3.12501</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='grass_plane'>
-        <pose frame=''>0.007423 -0.002819 0 0 -0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose frame=''>0.007423 -0.002819 0 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='ground_plane'>
-        <pose frame=''>0 0 0 0 -0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <light name='sun'>
-        <pose frame=''>0 0 10 0 -0 0</pose>
-      </light>
-    </state>
-    <gui fullscreen='0'>
-      <camera name='user_camera'>
-        <pose frame=''>-1.78225 -28.2543 39.1718 0 0.757797 1.23703</pose>
-        <view_controller>orbit</view_controller>
-        <projection_type>perspective</projection_type>
-      </camera>
-    </gui>
     <model name='grass_plane'>
       <static>1</static>
       <link name='link'>
         <collision name='collision'>
           <geometry>
             <box>
-              <size>100 100 0.1</size>
+              <size>80 80 0.1</size>
             </box>
           </geometry>
           <max_contacts>10</max_contacts>
@@ -176,7 +110,7 @@
           <cast_shadows>0</cast_shadows>
           <geometry>
             <box>
-              <size>100 100 0.1</size>
+              <size>80 80 0.1</size>
             </box>
           </geometry>
           <material>
@@ -191,21 +125,174 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose frame=''>-0.021535 -0.006147 0 0 -0 0</pose>
+      <pose frame=''>-0.208987 0.034967 0 0 -0 0</pose>
     </model>
-    <road name='my_road'>
-      <width>8</width>
-      <point>-18.65 -29 0.2</point>
-      <point>17.01 -29 0.2</point>
-      <point>30 -7.6 0.2</point>
-      <point>30 14.69 0.2</point>
-      <point>17.01 29 0.2</point>
-      <point>-18.65 29 0.2</point>
-      <point>-30 14.69 0.2</point>
-      <point>-30 -7.6 0.2</point>
-      <point>-18.65 -29 0.2</point>
-      <point>17.01 -29 0.2</point>
-    </road>
+    <state world_name='default'>
+      <sim_time>1714 774000000</sim_time>
+      <real_time>555 441958087</real_time>
+      <wall_time>1586714209 845717197</wall_time>
+      <iterations>552114</iterations>
+      <model name='Dumpster'>
+        <pose frame=''>11.2765 37.6689 0.051377 3e-06 2e-06 0.000223</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>11.2765 37.6689 0.051377 3e-06 2e-06 0.000223</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0.011025 0.004233 14.9605 0.032732 1.38146 3.14159</acceleration>
+          <wrench>0.011025 0.004233 14.9605 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='Fast Food'>
+        <pose frame=''>30.1884 -25.3238 0 0 -0 1.57454</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>30.1884 -25.3238 3.15931 0 -0 1.57454</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='House 1'>
+        <pose frame=''>30.7088 27.495 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>30.7088 27.495 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='House 2'>
+        <pose frame=''>-31.0865 -28.4891 0 0 -0 1.5329</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-31.0865 -28.4891 0 0 -0 1.5329</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='apartment'>
+        <pose frame=''>0.016582 27.0928 0 0 -0 1.57428</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>0.016582 27.0928 0 0 -0 1.57428</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='apartment_0'>
+        <pose frame=''>-1.80937 -26.6674 0 0 0 -1.58474</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-1.80937 -26.6674 0 0 0 -1.58474</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='fire_station'>
+        <pose frame=''>-32.1829 25.9094 0 0 0 -1.56475</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-32.1829 25.9094 0 0 0 -1.56475</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='fire_truck'>
+        <pose frame=''>-31.693 0.263419 0 0 0 -0.559181</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-31.693 0.263419 0 0 0 -0.559181</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='gazebo'>
+        <pose frame=''>29.4431 0.611063 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>29.4431 0.611063 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='grass_plane'>
+        <pose frame=''>0.006281 0.002186 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>0.006281 0.002186 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='ground_plane'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='pine_tree'>
+        <pose frame=''>10.7922 -16.8077 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>10.7922 -16.8077 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='pine_tree_0'>
+        <pose frame=''>-16.8488 -17.4333 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-16.8488 -17.4333 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='pine_tree_1'>
+        <pose frame=''>-16.4802 17.8475 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-16.4802 17.8475 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='pine_tree_2'>
+        <pose frame=''>12.0346 16.9843 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>12.0346 16.9843 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <light name='sun'>
+        <pose frame=''>0 0 10 0 -0 0</pose>
+      </light>
+    </state>
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose frame=''>57.6209 38.8471 28.5846 0 0.506792 -2.54877</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
     <model name='apartment'>
       <static>1</static>
       <link name='link'>
@@ -240,7 +327,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose frame=''>115.026 22.3957 0 0 -0 0</pose>
+      <pose frame=''>1.56498 31.611 0 0 -0 0</pose>
     </model>
     <model name='apartment_0'>
       <static>1</static>
@@ -276,8 +363,38 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose frame=''>114.937 -22.0741 0 0 -0 0</pose>
+      <pose frame=''>0.519346 -28.787 0 0 -0 0</pose>
     </model>
+    <road name='road_1'>
+      <width>5</width>
+      <point>17.5 40 0.2</point>
+      <point>17.5 11.75 0.2</point>
+      <point>17.5 -11 0.2</point>
+      <point>17.5 -40 0.2</point>
+    </road>
+    <road name='road_2'>
+      <width>5</width>
+      <point>-22.5 40 0.2</point>
+      <point>-22.5 11.75 0.2</point>
+      <point>-22.5 -11 0.2</point>
+      <point>-22.5 -40 0.2</point>
+    </road>
+    <road name='road_3'>
+      <width>5</width>
+      <point>40 11.75 0.2</point>
+      <point>17.5 11.75 0.2</point>
+      <point>0.31 11.75 0.2</point>
+      <point>-22.5 11.75 0.2</point>
+      <point>-40 11.75 0.2</point>
+    </road>
+    <road name='road_4'>
+      <width>5</width>
+      <point>40 -11 0.2</point>
+      <point>17.5 -11 0.2</point>
+      <point>0.31 -11 0.2</point>
+      <point>-22.5 -11 0.2</point>
+      <point>-40 -11 0.2</point>
+    </road>
     <model name='fire_station'>
       <static>1</static>
       <link name='link'>
@@ -586,10 +703,540 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose frame=''>11.6858 -95.5165 0 0 -0 0</pose>
+      <pose frame=''>-33.2695 24.1464 0 0 -0 0</pose>
     </model>
-    
-    <actor name="actor">
+    <model name='pine_tree'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://pine_tree/meshes/pine_tree.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='branch'>
+          <geometry>
+            <mesh>
+              <uri>model://pine_tree/meshes/pine_tree.dae</uri>
+              <submesh>
+                <name>Branch</name>
+              </submesh>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://pine_tree/materials/scripts/</uri>
+              <uri>model://pine_tree/materials/textures/</uri>
+              <name>PineTree/Branch</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='bark'>
+          <geometry>
+            <mesh>
+              <uri>model://pine_tree/meshes/pine_tree.dae</uri>
+              <submesh>
+                <name>Bark</name>
+              </submesh>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://pine_tree/materials/scripts/</uri>
+              <uri>model://pine_tree/materials/textures/</uri>
+              <name>PineTree/Bark</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>10.7922 -16.8077 0 0 -0 0</pose>
+    </model>
+    <model name='pine_tree_0'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://pine_tree/meshes/pine_tree.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='branch'>
+          <geometry>
+            <mesh>
+              <uri>model://pine_tree/meshes/pine_tree.dae</uri>
+              <submesh>
+                <name>Branch</name>
+              </submesh>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://pine_tree/materials/scripts/</uri>
+              <uri>model://pine_tree/materials/textures/</uri>
+              <name>PineTree/Branch</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='bark'>
+          <geometry>
+            <mesh>
+              <uri>model://pine_tree/meshes/pine_tree.dae</uri>
+              <submesh>
+                <name>Bark</name>
+              </submesh>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://pine_tree/materials/scripts/</uri>
+              <uri>model://pine_tree/materials/textures/</uri>
+              <name>PineTree/Bark</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-16.8488 -17.4333 0 0 -0 0</pose>
+    </model>
+    <model name='pine_tree_1'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://pine_tree/meshes/pine_tree.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='branch'>
+          <geometry>
+            <mesh>
+              <uri>model://pine_tree/meshes/pine_tree.dae</uri>
+              <submesh>
+                <name>Branch</name>
+              </submesh>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://pine_tree/materials/scripts/</uri>
+              <uri>model://pine_tree/materials/textures/</uri>
+              <name>PineTree/Branch</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='bark'>
+          <geometry>
+            <mesh>
+              <uri>model://pine_tree/meshes/pine_tree.dae</uri>
+              <submesh>
+                <name>Bark</name>
+              </submesh>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://pine_tree/materials/scripts/</uri>
+              <uri>model://pine_tree/materials/textures/</uri>
+              <name>PineTree/Bark</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-16.4802 17.8475 0 0 -0 0</pose>
+    </model>
+    <model name='pine_tree_2'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://pine_tree/meshes/pine_tree.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='branch'>
+          <geometry>
+            <mesh>
+              <uri>model://pine_tree/meshes/pine_tree.dae</uri>
+              <submesh>
+                <name>Branch</name>
+              </submesh>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://pine_tree/materials/scripts/</uri>
+              <uri>model://pine_tree/materials/textures/</uri>
+              <name>PineTree/Branch</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='bark'>
+          <geometry>
+            <mesh>
+              <uri>model://pine_tree/meshes/pine_tree.dae</uri>
+              <submesh>
+                <name>Bark</name>
+              </submesh>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://pine_tree/materials/scripts/</uri>
+              <uri>model://pine_tree/materials/textures/</uri>
+              <name>PineTree/Bark</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>12.0346 16.9843 0 0 -0 0</pose>
+    </model>
+    <model name='Fast Food'>
+      <static>1</static>
+      <link name='link'>
+        <pose frame=''>0 0 3.15931 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <scale>3 3 2</scale>
+              <uri>model://fast_food/meshes/fast_food.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>3 3 2</scale>
+              <uri>model://fast_food/meshes/fast_food.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://fast_food/materials/scripts</uri>
+              <uri>model://fast_food/materials/textures</uri>
+              <name>FastFood/Diffuse</name>
+            </script>
+            <shader type='normal_map_tangent_space'>
+              <normal_map>FastFood_Normal.png</normal_map>
+            </shader>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>33.0453 -23.9498 0 0 -0 0</pose>
+    </model>
+    <model name='Dumpster'>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <scale>1.5 1.5 1.5</scale>
+              <uri>model://dumpster/meshes/dumpster.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>1.5 1.5 1.5</scale>
+              <uri>model://dumpster/meshes/dumpster.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://dumpster/materials/scripts</uri>
+              <uri>model://dumpster/materials/textures</uri>
+              <name>Dumpster/Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <inertial>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+        </inertial>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>11.2758 37.669 0 0 -0 0</pose>
+    </model>
+    <model name='fire_truck'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <scale>0.1 0.1 0.1</scale>
+              <uri>model://fire_truck/meshes/fire_truck.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>0.1 0.1 0.1</scale>
+              <uri>model://fire_truck/meshes/fire_truck.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-32.3439 0.901136 0 0 -0 0</pose>
+    </model>
+    <model name='gazebo'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <scale>3 3 2.5</scale>
+              <uri>model://gazebo/meshes/gazebo.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>3 3 2.5</scale>
+              <uri>model://gazebo/meshes/gazebo.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>29.4431 0.611063 0 0 -0 0</pose>
+    </model>
+    <model name='House 1'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://house_1/meshes/house_1.dae</uri>
+              <scale>1.5 1.5 1.5</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://house_1/meshes/house_1.dae</uri>
+              <scale>1.5 1.5 1.5</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://house_1/materials/scripts</uri>
+              <uri>model://house_1/materials/textures</uri>
+              <name>House_1/Diffuse</name>
+            </script>
+            <shader type='normal_map_tangent_space'>
+              <normal_map>House_1_Normal.png</normal_map>
+            </shader>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>30.08 27.3679 0 0 -0 0</pose>
+    </model>
+    <model name='House 2'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://house_2/meshes/house_2.dae</uri>
+              <scale>1.5 1.5 1.5</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://house_2/meshes/house_2.dae</uri>
+              <scale>1.5 1.5 1.5</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://house_2/materials/scripts</uri>
+              <uri>model://house_2/materials/textures</uri>
+              <uri>model://house_1/materials/textures</uri>
+              <name>House_2/Diffuse</name>
+            </script>
+            <shader type='normal_map_tangent_space'>
+              <normal_map>model://house_1/materials/textures/House_1_Normal.png</normal_map>
+            </shader>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>-33.0776 -27.1393 0 0 -0 0</pose>
+    </model>
+
+    <actor name="actor_1">
       <skin>
         <filename>moonwalk.dae</filename>
       </skin>
@@ -598,26 +1245,692 @@
         <interpolate_x>true</interpolate_x>
       </animation>
       <script>
+        <loop>true</loop>
+        <delay_start>0.000000</delay_start>
+        <auto_start>true</auto_start>
         <trajectory id="0" type="walking">
           <waypoint>
             <time>0</time>
-            <pose>0 2 0 0 0 -1.57</pose>
+            <pose>16.0 11.75 0.2 0 0 -3.14</pose>
           </waypoint>
           <waypoint>
-            <time>2</time>
-            <pose>0 -2 0 0 0 -1.57</pose>
+            <time>6</time>
+            <pose>0.31 11.75 0.2 0 0 -3.14</pose>
           </waypoint>
           <waypoint>
-            <time>2.5</time>
-            <pose>0 -2 0 0 0 1.57</pose>
+            <time>12</time>
+            <pose>-20 11.75 0.2 0 0 -3.14</pose>
           </waypoint>
           <waypoint>
-            <time>7</time>
-            <pose>0 2 0 0 0 1.57</pose>
+            <time>13.5</time>
+            <pose>-22.5 9.25 0.2 0 0 -1.57</pose>
           </waypoint>
           <waypoint>
-            <time>7.5</time>
-            <pose>0 2 0 0 0 -1.57</pose>
+            <time>21.5</time>
+            <pose>-22.5 -8.75 0.2 0 0 -1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>23</time>
+            <pose>-20 -11 0.2 0 0 0</pose>
+          </waypoint>
+          <waypoint>
+            <time>29</time>
+            <pose>0.31 -11 0.2 0 0 0</pose>
+          </waypoint>
+          <waypoint>
+            <time>35</time>
+            <pose>15 -11 0.2 0 0 0</pose>
+          </waypoint>
+          <waypoint>
+            <time>36.5</time>
+            <pose>17.5 -9.5 0.2 0 0 1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>44.5</time>
+            <pose>17.5 9.25 0.2 0 0 1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>46</time>
+            <pose>16.0 11.75 0.2 0 0 -3.14</pose>
+          </waypoint>
+        </trajectory>
+      </script>
+    </actor>
+
+    <actor name="actor_2">
+      <skin>
+        <filename>moonwalk.dae</filename>
+      </skin>
+      <animation name="walking">
+        <filename>walk.dae</filename>
+        <interpolate_x>true</interpolate_x>
+      </animation>
+      <script>
+        <loop>true</loop>
+        <delay_start>0.000000</delay_start>
+        <auto_start>true</auto_start>
+        <trajectory id="1" type="walking">
+          <waypoint>
+            <time>0</time>
+            <pose>17.5 35 0.2 0 0 -1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>10</time>
+            <pose>17.5 11.75 0.2 0 0 -1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>18</time>
+            <pose>17.5 -11 0.2 0 0 -1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>36</time>
+            <pose>17.5 -35 0.2 0 0 -1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>36.5</time>
+            <pose>17.5 -35 0.2 0 0 1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>46.5</time>
+            <pose>17.5 -11 0.2 0 0 1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>54.5</time>
+            <pose>17.5 11.75 0.2 0 0 1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>64.5</time>
+            <pose>17.5 35 0.2 0 0 1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>65</time>
+            <pose>17.5 35 0.2 0 0 -1.57</pose>
+          </waypoint>
+        </trajectory>
+      </script>
+    </actor>
+
+    <actor name="actor_3">
+      <skin>
+        <filename>walk.dae</filename>
+      </skin>
+      <animation name="walking">
+        <filename>walk.dae</filename>
+        <interpolate_x>true</interpolate_x>
+      </animation>
+      <script>
+        <loop>true</loop>
+        <delay_start>0.000000</delay_start>
+        <auto_start>true</auto_start>
+        <trajectory id="2" type="walking">
+          <waypoint>
+            <time>0</time>
+            <pose>-22.5 -35 0.2 0 0 1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>10</time>
+            <pose>-22.5 -11 0.2 0 0 1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>18</time>
+            <pose>-22.5 11.75 0.2 0 0 1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>36</time>
+            <pose>-22.5 35 0.2 0 0 1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>36.5</time>
+            <pose>-22.5 35 0.2 0 0 -1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>46.5</time>
+            <pose>-22.5 11.75 0.2 0 0 -1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>54.5</time>
+            <pose>-22.5 -11 0.2 0 0 -1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>64.5</time>
+            <pose>-22.55 -35 0.2 0 0 -1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>65</time>
+            <pose>-22.5 -35 0.2 0 0 1.57</pose>
+          </waypoint>
+        </trajectory>
+      </script>
+    </actor>
+
+    <actor name="actor_4">
+      <skin>
+        <filename>moonwalk.dae</filename>
+      </skin>
+      <animation name="walking">
+        <filename>walk.dae</filename>
+        <interpolate_x>true</interpolate_x>
+      </animation>
+      <script>
+        <loop>true</loop>
+        <delay_start>0.000000</delay_start>
+        <auto_start>true</auto_start>
+        <trajectory id="3" type="walking">
+          <waypoint>
+            <time>0</time>
+            <pose>35 11.75 0.2 0 0 -3.14</pose>
+          </waypoint>
+          <waypoint>
+            <time>8</time>
+            <pose>17.5 11.75 0.2 0 0 -3.14</pose>
+          </waypoint>
+          <waypoint>
+            <time>14</time>
+            <pose>0.31 11.75 0.2 0 0 -3.14</pose>
+          </waypoint>
+          <waypoint>
+            <time>20</time>
+            <pose>-22.5 11.75 0.2 0 0 -3.14</pose>
+          </waypoint>
+          <waypoint>
+            <time>28</time>
+            <pose>-35 11.75 0.2 0 0 -3.14</pose>
+          </waypoint>
+          <waypoint>
+            <time>28.5</time>
+            <pose>-35 11.75 0.2 0 0 0</pose>
+          </waypoint>
+          <waypoint>
+            <time>36.5</time>
+            <pose>-22.5 11.75 0.2 0 0 0</pose>
+          </waypoint>
+          <waypoint>
+            <time>42.5</time>
+            <pose>0.31 11.75 0.2 0 0 0</pose>
+          </waypoint>
+          <waypoint>
+            <time>48.5</time>
+            <pose>17.5 11.75 0.2 0 0 0</pose>
+          </waypoint>
+          <waypoint>
+            <time>56.5</time>
+            <pose>35 11.75 0.2 0 0 0</pose>
+          </waypoint>
+          <waypoint>
+            <time>57</time>
+            <pose>35 11.75 0.2 0 0 -3.14</pose>
+          </waypoint>
+        </trajectory>
+      </script>
+    </actor>
+
+    <actor name="actor_5">
+      <skin>
+        <filename>walk.dae</filename>
+      </skin>
+      <animation name="walking">
+        <filename>walk.dae</filename>
+        <interpolate_x>true</interpolate_x>
+      </animation>
+      <script>
+        <loop>true</loop>
+        <delay_start>0.000000</delay_start>
+        <auto_start>true</auto_start>
+        <trajectory id="4" type="walking">         
+          <waypoint>
+            <time>0</time>
+            <pose>-35 -11 0.2 0 0 0</pose>
+          </waypoint>
+          <waypoint>
+            <time>8</time>
+            <pose>-22.5 -11 0.2 0 0 0</pose>
+          </waypoint>
+          <waypoint>
+            <time>14</time>
+            <pose>0.31 -11 0.2 0 0 0</pose>
+          </waypoint>
+          <waypoint>
+            <time>20</time>
+            <pose>17.5 -11 0.2 0 0 0</pose>
+          </waypoint>
+          <waypoint>
+            <time>28</time>
+            <pose>35 -11 0.2 0 0 0</pose>
+          </waypoint>
+          <waypoint>
+            <time>28.5</time>
+            <pose>35 -11 0.2 0 0 -3.14</pose>
+          </waypoint>
+          <waypoint>
+            <time>36.5</time>
+            <pose>17.5 -11 0.2 0 0 -3.14</pose>
+          </waypoint>
+          <waypoint>
+            <time>42.5</time>
+            <pose>0.31 -11 0.2 0 0 -3.14</pose>
+          </waypoint>
+          <waypoint>
+            <time>48.5</time>
+            <pose>-22.5 -11 0.2 0 0 -3.14</pose>
+          </waypoint>
+          <waypoint>
+            <time>56.5</time>
+            <pose>-35 -11 0.2 0 0 -3.14</pose>
+          </waypoint>
+          <waypoint>
+            <time>57</time>
+            <pose>-35 -11 0.2 0 0 0</pose>
+          </waypoint>
+        </trajectory>
+      </script>
+    </actor>
+
+    <actor name="actor_6">
+      <skin>
+        <filename>moonwalk.dae</filename>
+      </skin>
+      <animation name="walking">
+        <filename>walk.dae</filename>
+        <interpolate_x>true</interpolate_x>
+      </animation>
+      <script>
+        <loop>true</loop>
+        <delay_start>0.000000</delay_start>
+        <auto_start>true</auto_start>
+        <trajectory id="5" type="walking">
+          <waypoint>
+            <time>0</time>
+            <pose>-22.5 35 0.2 0 0 -1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>10</time>
+            <pose>-22.5 11.75 0.2 0 0 -1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>18</time>
+            <pose>-22.5 -11 0.2 0 0 -1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>36</time>
+            <pose>-22.5 -35 0.2 0 0 -1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>36.5</time>
+            <pose>-22.5 -35 0.2 0 0 1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>46.5</time>
+            <pose>-22.5 -11 0.2 0 0 1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>54.5</time>
+            <pose>-22.5 11.75 0.2 0 0 1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>64.5</time>
+            <pose>-22.5 35 0.2 0 0 1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>65</time>
+            <pose>-22.5 35 0.2 0 0 -1.57</pose>
+          </waypoint>
+        </trajectory>
+      </script>
+    </actor>
+
+    <actor name="actor_7">
+      <skin>
+        <filename>walk.dae</filename>
+      </skin>
+      <animation name="walking">
+        <filename>walk.dae</filename>
+        <interpolate_x>true</interpolate_x>
+      </animation>
+      <script>
+        <loop>true</loop>
+        <delay_start>0.000000</delay_start>
+        <auto_start>true</auto_start>
+        <trajectory id="6" type="walking">
+          <waypoint>
+            <time>0</time>
+            <pose>17.5 -35 0.2 0 0 1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>10</time>
+            <pose>17.5 -11 0.2 0 0 1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>18</time>
+            <pose>17.5 11.75 0.2 0 0 1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>36</time>
+            <pose>17.5 35 0.2 0 0 1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>36.5</time>
+            <pose>17.5 35 0.2 0 0 -1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>46.5</time>
+            <pose>17.5 11.75 0.2 0 0 -1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>54.5</time>
+            <pose>17.5 -11 0.2 0 0 -1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>64.5</time>
+            <pose>17.5 -35 0.2 0 0 -1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>65</time>
+            <pose>17.5 -35 0.2 0 0 1.57</pose>
+          </waypoint>
+        </trajectory>
+      </script>
+    </actor>
+
+    <actor name="actor_8">
+      <skin>
+        <filename>moonwalk.dae</filename>
+      </skin>
+      <animation name="walking">
+        <filename>walk.dae</filename>
+        <interpolate_x>true</interpolate_x>
+      </animation>
+      <script>
+        <loop>true</loop>
+        <delay_start>0.000000</delay_start>
+        <auto_start>true</auto_start>
+        <trajectory id="7" type="walking">
+          <waypoint>
+            <time>0</time>
+            <pose>35 -11 0.2 0 0 -3.14</pose>
+          </waypoint>
+          <waypoint>
+            <time>8</time>
+            <pose>17.5 -11 0.2 0 0 -3.14</pose>
+          </waypoint>
+          <waypoint>
+            <time>14</time>
+            <pose>0.31 -11 0.2 0 0 -3.14</pose>
+          </waypoint>
+          <waypoint>
+            <time>20</time>
+            <pose>-22.5 -11 0.2 0 0 -3.14</pose>
+          </waypoint>
+          <waypoint>
+            <time>28</time>
+            <pose>-35 -11 0.2 0 0 -3.14</pose>
+          </waypoint>
+          <waypoint>
+            <time>28.5</time>
+            <pose>-35 -11 0.2 0 0 0</pose>
+          </waypoint>
+          <waypoint>
+            <time>36.5</time>
+            <pose>-22.5 -11 0.2 0 0 0</pose>
+          </waypoint>
+          <waypoint>
+            <time>42.5</time>
+            <pose>0.31 -11 0.2 0 0 0</pose>
+          </waypoint>
+          <waypoint>
+            <time>48.5</time>
+            <pose>17.5 -11 0.2 0 0 0</pose>
+          </waypoint>
+          <waypoint>
+            <time>56.5</time>
+            <pose>35 -11 0.2 0 0 0</pose>
+          </waypoint>
+          <waypoint>
+            <time>57</time>
+            <pose>35 -11 0.2 0 0 -3.14</pose>
+          </waypoint>
+        </trajectory>
+      </script>
+    </actor>
+
+    <actor name="actor_9">
+      <skin>
+        <filename>walk.dae</filename>
+      </skin>
+      <animation name="walking">
+        <filename>walk.dae</filename>
+        <interpolate_x>true</interpolate_x>
+      </animation>
+      <script>
+        <loop>true</loop>
+        <delay_start>0.000000</delay_start>
+        <auto_start>true</auto_start>
+        <trajectory id="8" type="walking">         
+          <waypoint>
+            <time>0</time>
+            <pose>-35 11.75 0.2 0 0 0</pose>
+          </waypoint>
+          <waypoint>
+            <time>8</time>
+            <pose>-22.5 11.75 0.2 0 0 0</pose>
+          </waypoint>
+          <waypoint>
+            <time>14</time>
+            <pose>0.31 11.75 0.2 0 0 0</pose>
+          </waypoint>
+          <waypoint>
+            <time>20</time>
+            <pose>17.5 11.75 0.2 0 0 0</pose>
+          </waypoint>
+          <waypoint>
+            <time>28</time>
+            <pose>35 11.75 0.2 0 0 0</pose>
+          </waypoint>
+          <waypoint>
+            <time>28.5</time>
+            <pose>35 11.75 0.2 0 0 -3.14</pose>
+          </waypoint>
+          <waypoint>
+            <time>36.5</time>
+            <pose>17.5 11.75 0.2 0 0 -3.14</pose>
+          </waypoint>
+          <waypoint>
+            <time>42.5</time>
+            <pose>0.31 11.75 0.2 0 0 -3.14</pose>
+          </waypoint>
+          <waypoint>
+            <time>48.5</time>
+            <pose>-22.5 11.75 0.2 0 0 -3.14</pose>
+          </waypoint>
+          <waypoint>
+            <time>56.5</time>
+            <pose>-35 11.75 0.2 0 0 -3.14</pose>
+          </waypoint>
+          <waypoint>
+            <time>57</time>
+            <pose>-35 11.75 0.2 0 0 0</pose>
+          </waypoint>
+        </trajectory>
+      </script>
+    </actor>
+
+    <actor name="actor_10">
+      <skin>
+        <filename>moonwalk.dae</filename>
+      </skin>
+      <animation name="walking">
+        <filename>walk.dae</filename>
+        <interpolate_x>true</interpolate_x>
+      </animation>
+      <script>
+        <loop>true</loop>
+        <delay_start>0.000000</delay_start>
+        <auto_start>true</auto_start>
+        <trajectory id="9" type="walking">
+          <waypoint>
+            <time>0</time>
+            <pose>-22.5 9.25 0.2 0 0 -1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>8</time>
+            <pose>-22.5 -8.75 0.2 0 0 -1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>9.5</time>
+            <pose>-20 -11 0.2 0 0 0</pose>
+          </waypoint>
+          <waypoint>
+            <time>15.5</time>
+            <pose>0.31 -11 0.2 0 0 0</pose>
+          </waypoint>
+          <waypoint>
+            <time>21.5</time>
+            <pose>15 -11 0.2 0 0 0</pose>
+          </waypoint>
+          <waypoint>
+            <time>23</time>
+            <pose>17.5 -9.5 0.2 0 0 1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>31</time>
+            <pose>17.5 9.25 0.2 0 0 1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>32.5</time>
+            <pose>16.0 11.75 0.2 0 0 -3.14</pose>
+          </waypoint>
+          <waypoint>
+            <time>38.5</time>
+            <pose>0.31 11.75 0.2 0 0 -3.14</pose>
+          </waypoint>
+          <waypoint>
+            <time>44.5</time>
+            <pose>-20 11.75 0.2 0 0 -3.14</pose>
+          </waypoint>
+          <waypoint>
+            <time>46</time>
+            <pose>-22.5 9.25 0.2 0 0 -1.57</pose>
+          </waypoint>
+        </trajectory>
+      </script>
+    </actor>
+
+    <actor name="actor_11">
+      <skin>
+        <filename>walk.dae</filename>
+      </skin>
+      <animation name="walking">
+        <filename>walk.dae</filename>
+        <interpolate_x>true</interpolate_x>
+      </animation>
+      <script>
+        <loop>true</loop>
+        <delay_start>0.000000</delay_start>
+        <auto_start>true</auto_start>
+        <trajectory id="10" type="walking">
+          <waypoint>
+            <time>0</time>
+            <pose>-20 -11 0.2 0 0 0</pose>
+          </waypoint>
+          <waypoint>
+            <time>6</time>
+            <pose>0.31 -11 0.2 0 0 0</pose>
+          </waypoint>
+          <waypoint>
+            <time>12</time>
+            <pose>15 -11 0.2 0 0 0</pose>
+          </waypoint>
+          <waypoint>
+            <time>13.5</time>
+            <pose>17.5 -9.5 0.2 0 0 1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>21.5</time>
+            <pose>17.5 9.25 0.2 0 0 1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>23</time>
+            <pose>16.0 11.75 0.2 0 0 -3.14</pose>
+          </waypoint>
+          <waypoint>
+            <time>29</time>
+            <pose>0.31 11.75 0.2 0 0 -3.14</pose>
+          </waypoint>
+          <waypoint>
+            <time>35</time>
+            <pose>-20 11.75 0.2 0 0 -3.14</pose>
+          </waypoint>
+          <waypoint>
+            <time>36.5</time>
+            <pose>-22.5 9.25 0.2 0 0 -1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>44.5</time>
+            <pose>-22.5 -8.75 0.2 0 0 -1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>46</time>
+            <pose>-20 -11 0.2 0 0 0</pose>
+          </waypoint>
+        </trajectory>
+      </script>
+    </actor>
+
+    <actor name="actor_12">
+      <skin>
+        <filename>moonwalk.dae</filename>
+      </skin>
+      <animation name="walking">
+        <filename>walk.dae</filename>
+        <interpolate_x>true</interpolate_x>
+      </animation>
+      <script>
+        <loop>true</loop>
+        <delay_start>0.000000</delay_start>
+        <auto_start>true</auto_start>
+        <trajectory id="11" type="walking">
+          <waypoint>
+            <time>0</time>
+            <pose>17.5 -9.5 0.2 0 0 1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>8</time>
+            <pose>17.5 9.25 0.2 0 0 1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>9.5</time>
+            <pose>16.0 11.75 0.2 0 0 -3.14</pose>
+          </waypoint>
+          <waypoint>
+            <time>15.5</time>
+            <pose>0.31 11.75 0.2 0 0 -3.14</pose>
+          </waypoint>
+          <waypoint>
+            <time>21.5</time>
+            <pose>-20 11.75 0.2 0 0 -3.14</pose>
+          </waypoint>
+          <waypoint>
+            <time>23</time>
+            <pose>-22.5 9.25 0.2 0 0 -1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>31</time>
+            <pose>-22.5 -8.75 0.2 0 0 -1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>32.5</time>
+            <pose>-20 -11 0.2 0 0 0</pose>
+          </waypoint>
+          <waypoint>
+            <time>38.5</time>
+            <pose>0.31 -11 0.2 0 0 0</pose>
+          </waypoint>
+          <waypoint>
+            <time>44.5</time>
+            <pose>15 -11 0.2 0 0 0</pose>
+          </waypoint>
+          <waypoint>
+            <time>46</time>
+            <pose>17.5 -9.5 0.2 0 0 1.57</pose>
           </waypoint>
         </trajectory>
       </script>
