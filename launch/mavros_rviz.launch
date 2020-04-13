@@ -11,7 +11,7 @@
     <arg name="Y" default="0"/> <!-- The URDF model is rotated to get its properly pos 3.14159 -->
     <!-- vehicle model and world -->
     <arg name="vehicle" default="quad_f450_thermal"/>
-    <arg name="world" default="$(find mavlink_sitl_gazebo)/worlds/grass_pad.world"/>
+    <arg name="world" default="$(find mavlink_sitl_gazebo)/worlds/thermal.world"/>
 
     <!-- gazebo configs -->
     <arg name="gui" default="true"/>
