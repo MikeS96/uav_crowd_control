@@ -55,7 +55,7 @@
         <node name="$(arg vehicle)_$(arg ID)_spawn" output="screen" pkg="gazebo_ros" type="spawn_model" args="-urdf -param rotors_description -model $(arg vehicle)_$(arg ID) -package_to_model -x $(arg x) -y $(arg y) -z $(arg z) -R $(arg R) -P $(arg P) -Y $(arg Y)"/>
 
     	<!-- MAVROS -->
-        <include file="$(find airflyd)/launch/px4.launch">
+        <include file="$(find uav_crowd_control)/launch/px4.launch">
             <!-- GCS link is provided by SITL -->
             <arg name="gcs_url" value=""/>
             <arg name="fcu_url" value="$(arg fcu_url)"/>
@@ -65,10 +65,19 @@
 
     </group>
 
+
     <!-- IMAGE VIEWER NODE -->
-    <node name="image_view" pkg="image_view" type="image_view" respawn="false" output="screen">
-        <remap from="image" to="/quad_f450_thermal_0/camera_quad_f450_thermal/image_raw" />
+    <node name="image_view_right" pkg="image_view" type="image_view" respawn="false" output="screen">
+    	<remap from="image" to="/quad_f450_thermal_0/camera_quad_f450_thermal/image_raw" />
+   	<param name="autosize" value="true" />
+    <param name="window_name" value="Thermic" />
+    </node> 
+
+    <!-- IMAGE VIEWER NODE -->
+    <node name="image_view_left" pkg="image_view" type="image_view" respawn="false" output="screen">
+        <remap from="image" to="/quad_f450_thermal_0/camera_quad_f450_monocular/image_raw" />
     <param name="autosize" value="true" />
+    <param name="window_name" value="RGB" />
     </node> 
 
     <!-- Robot description -->
@@ -83,7 +92,7 @@
     <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" /> 
 
     <!-- Launch visualization in rviz -->
-    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find mavros_off_board)/urdf.rviz" required="true" /> 
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find uav_crowd_control)/urdf.rviz" required="true" /> 
 
 </launch>
 
