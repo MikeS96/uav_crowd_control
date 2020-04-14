@@ -10,7 +10,8 @@
   <!-- The following causes segfault with multiple vehicles if defaults to true!!! -->
   <!-- macros for gazebo plugins, sensors -->
   <!-- Macro to add logging to a bag file. -->
-  <!-- Macro to add a camera. -->
+  <!-- Macro to add a thermal camera. -->
+  <!-- Macro to add a monocular camera. -->
   <!-- Macro to add the controller interface. -->
   <!-- Macro to add the gps_plugin. -->
   <!-- Macro to add the magnetometer_plugin. -->
@@ -56,7 +57,7 @@
   </joint>
   <link name="base_link_inertia">
     <inertial>
-      <mass value="1.65"/>
+      <mass value="1.7"/>
       <!-- [kg] -->
       <origin xyz="0 0 0"/>
       <inertia ixx="0.014959" ixy="0.0" ixz="0.0" iyy="0.022005" iyz="0.0" izz="0.028033"/>
@@ -456,7 +457,7 @@
   </gazebo>
   <link name="/camera_quad_f450_thermal_link">
     <collision>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <origin rpy="1.57 0 0" xyz="0 0 0"/>
       <geometry>
         <box size="0.023813 0.027686 0.092682"/>
       </geometry>
@@ -470,12 +471,12 @@
     </visual>
     <inertial>
       <mass value="0.050075"/>
-      <origin rpy="0 0 0" xyz="-0.0013668 -1.5197e-5 0.00025326"/>
-      <inertia ixx="3.2061e-05" ixy="-1.169e-08" ixz="-4.2601e-10" iyy="3.0815e-05" iyz="5.2182e-10" izz="5.1652e-06"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="3.2061e-05" ixy="4.2601e-10" ixz="-1.169e-08" iyy="5.1652e-06" iyz="-5.2183e-10" izz="3.0815e-05"/>
     </inertial>
   </link>
   <joint name="/camera_quad_f450_thermal_joint" type="fixed">
-    <origin rpy="1.5708 1.5708 0" xyz="0 0 -0.013633"/>
+    <origin rpy="0.020785 0.7854 0" xyz="0.042355 0.046075 -0.066582"/>
     <parent link="base_link"/>
     <child link="/camera_quad_f450_thermal_link"/>
   </joint>
@@ -485,7 +486,7 @@
       <visualize>true</visualize>
       <always_on>1</always_on>
       <camera name="head">
-        <pose>0 0 0 -1.5708 0 0</pose>
+        <pose>0 0 0 0 0 0</pose>
         <horizontal_fov>2.0</horizontal_fov>
         <image>
           <width>640</width>
@@ -496,6 +497,14 @@
           <near>0.05</near>
           <far>15000</far>
         </clip>
+        <!-- <noise>
+            <type>gaussian</type>
+             Noise is sampled independently per pixel on each frame.
+                 That pixel's noise value is added to each of its color
+                 channels, which at that point lie in the range [0,1].
+            <mean>${noise_mean}</mean>
+            <stddev>${noise_stddev}</stddev>
+          </noise>  -->
       </camera>
       <plugin filename="libgazebo_ros_thermal_camera.so" name="_camera_quad_f450_thermal_controller">
         <robotNamespace></robotNamespace>
@@ -513,7 +522,87 @@
         <distortionT2>0.0</distortionT2>
       </plugin>
     </sensor>
-    <material>Gazebo/DarkGrey</material>
+    <material>Gazebo/White</material>
+  </gazebo>
+  <link name="/camera_quad_f450_monocular_link">
+    <collision>
+      <origin rpy="1.57 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.023813 0.027686 0.092682"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://uav_crowd_control/meshes/cam_link.STL"/>
+      </geometry>
+      <material name="red"/>
+    </visual>
+    <inertial>
+      <mass value="0.050075"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="3.2061e-05" ixy="4.2601e-10" ixz="-1.169e-08" iyy="5.1652e-06" iyz="-5.2181e-10" izz="3.0815e-05"/>
+    </inertial>
+  </link>
+  <joint name="/camera_quad_f450_monocular_joint" type="fixed">
+    <origin rpy="0.0068235 0.7854 0" xyz="0.041421 -0.046913 -0.067515"/>
+    <parent link="base_link"/>
+    <child link="/camera_quad_f450_monocular_link"/>
+  </joint>
+  <gazebo reference="/camera_quad_f450_monocular_link">
+    <sensor name="_camera_quad_f450_monocular" type="camera">
+      <update_rate>30.0</update_rate>
+      <visualize>true</visualize>
+      <always_on>1</always_on>
+      <camera name="head">
+        <pose>0 0 0 0 0 0</pose>
+        <horizontal_fov>2.0</horizontal_fov>
+        <image>
+          <width>640</width>
+          <height>480</height>
+          <format>R8G8B8</format>
+        </image>
+        <clip>
+          <near>0.05</near>
+          <far>15000</far>
+        </clip>
+        <noise>
+          <type>gaussian</type>
+          <!-- Noise is sampled independently per pixel on each frame.
+                 That pixel's noise value is added to each of its color
+                 channels, which at that point lie in the range [0,1]. -->
+          <mean>0.0</mean>
+          <stddev>0.007</stddev>
+        </noise>
+      </camera>
+      <plugin filename="libgazebo_ros_camera.so" name="_camera_quad_f450_monocular_controller">
+        <robotNamespace></robotNamespace>
+        <alwaysOn>true</alwaysOn>
+        <updateRate>30.0</updateRate>
+        <cameraName>camera_quad_f450_monocular</cameraName>
+        <imageTopicName>image_raw</imageTopicName>
+        <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+        <frameName>camera_quad_f450_monocular_link</frameName>
+        <hackBaseline>0.0</hackBaseline>
+        <distortionK1>0.0</distortionK1>
+        <distortionK2>0.0</distortionK2>
+        <distortionK3>0.0</distortionK3>
+        <distortionT1>0.0</distortionT1>
+        <distortionT2>0.0</distortionT2>
+      </plugin>
+      <plugin filename="libgazebo_gst_camera_plugin.so" name="GstCameraPlugin">
+        <robotNamespace/>
+        <udpPort>5600</udpPort>
+      </plugin>
+      <plugin filename="libgazebo_geotagged_images_plugin.so" name="GeotaggedImagesPlugin">
+        <robotNamespace>quad_f450_thermal</robotNamespace>
+        <interval>1</interval>
+        <width>3840</width>
+        <height>2160</height>
+        <maximum_zoom>8.0</maximum_zoom>
+      </plugin>
+    </sensor>
+    <material>Gazebo/White</material>
   </gazebo>
   <!-- Mount an ADIS16448 IMU. -->
   <!-- IMU link -->

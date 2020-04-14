@@ -211,3 +211,7 @@ include_directories(
 #Off board control
 add_executable(offboard_n src/offboard_n.cpp)
 target_link_libraries(offboard_n ${catkin_LIBRARIES})
+
+#Off board control
+add_executable(square_path src/square_path.cpp)
+target_link_libraries(square_path ${catkin_LIBRARIES})
