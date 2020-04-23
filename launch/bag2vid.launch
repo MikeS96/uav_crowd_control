@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <launch>
-  <node pkg="rosbag" type="play" name="rosbag" required="true" args="/home/sherlock/catkin_ws/bagfiles/take_2.bag"/>
+  <node pkg="rosbag" type="play" name="rosbag" required="true" args="/home/sherlock/catkin_ws/bagfiles/take_3.bag"/>
   <node name="extract" pkg="image_view" type="extract_images" respawn="false" required="true" output="screen" cwd="ROS_HOME">
-    <remap from="image" to="/quad_f450_thermal_0/camera_quad_f450_monocular/image_raw"/>
+    <remap from="image" to="/quad_f450_thermal_0/camera_quad_f450_thermal/image_raw"/>
   </node>
 </launch>
 

@@ -128,7 +128,7 @@ int main(int argc, char **argv)
 
 	    //send setpoints for 10 seconds
 	    ROS_INFO("going to second way point");
-	    for(int i = 0; ros::ok() && i < 10*10; ++i){
+	    for(int i = 0; ros::ok() && i < 10*20; ++i){
 
 	      local_pos_pub.publish(pose);
 	      ros::spinOnce();
@@ -148,7 +148,7 @@ int main(int argc, char **argv)
 
 	    //send setpoints for 10 seconds
 	    ROS_INFO("going to third way point");
-	    for(int i = 0; ros::ok() && i < 10*10; ++i){
+	    for(int i = 0; ros::ok() && i < 10*20; ++i){
 
 	      local_pos_pub.publish(pose);
 	      ros::spinOnce();
@@ -168,7 +168,7 @@ int main(int argc, char **argv)
 
 	    //send setpoints for 10 seconds
 	    ROS_INFO("going to forth way point");
-	    for(int i = 0; ros::ok() && i < 10*10; ++i){
+	    for(int i = 0; ros::ok() && i < 10*20; ++i){
 
 	      local_pos_pub.publish(pose);
 	      ros::spinOnce();
