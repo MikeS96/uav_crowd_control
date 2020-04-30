@@ -2,12 +2,14 @@ cmake_minimum_required(VERSION 2.8.3)
 project(uav_crowd_control)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
-# add_compile_options(-std=c++11)
+add_compile_options(-std=c++11)
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
+  cv_bridge
+  image_transport
   geometry_msgs
   mavros_msgs
   roscpp
@@ -21,7 +23,9 @@ find_package(catkin REQUIRED COMPONENTS
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
+find_package(Eigen3 REQUIRED) #Requiero Eigen 3
 
+find_package( OpenCV REQUIRED ) #Requiero a OpenCV
 
 ## Uncomment this if the package has a setup.py. This macro ensures
 ## modules and global scripts declared therein get installed
@@ -124,6 +128,8 @@ catkin_package(
 include_directories(
 # include
   ${catkin_INCLUDE_DIRS}
+  ${EIGEN3_INCLUDE_DIR} #incluyo el directorio de eigen 3
+  ${OpenCV_INCLUDE_DIRS}#Incluyo directorios de Open CV
 )
 
 ## Declare a C++ library

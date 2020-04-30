@@ -24,15 +24,15 @@ int main(int argc, char **argv)
     ros::NodeHandle nh;
 
     ros::Subscriber state_sub = nh.subscribe<mavros_msgs::State>
-            ("/uav0/mavros/state", 10, state_cb);
+            ("mavros/state", 10, state_cb);
     ros::Publisher local_pos_pub = nh.advertise<geometry_msgs::PoseStamped>
-            ("/uav0/mavros/setpoint_position/local", 10);
+            ("mavros/setpoint_position/local", 10);
     ros::ServiceClient arming_client = nh.serviceClient<mavros_msgs::CommandBool>
-            ("/uav0/mavros/cmd/arming");
+            ("mavros/cmd/arming");
     ros::ServiceClient land_client = nh.serviceClient<mavros_msgs::CommandTOL>
-      ("/uav0/mavros/cmd/land");
+      ("mavros/cmd/land");
     ros::ServiceClient set_mode_client = nh.serviceClient<mavros_msgs::SetMode>
-            ("/uav0/mavros/set_mode");
+            ("mavros/set_mode");
 
     //the setpoint publishing rate MUST be faster than 2Hz
     ros::Rate rate(20.0);
@@ -47,7 +47,7 @@ int main(int argc, char **argv)
     geometry_msgs::PoseStamped pose;
     pose.pose.position.x = 0;
     pose.pose.position.y = 0;
-    pose.pose.position.z = 3.5;
+    pose.pose.position.z = 3.0;
 
     //send a few setpoints before starting
     for(int i = 100; ros::ok() && i > 0; --i){
@@ -98,9 +98,9 @@ int main(int argc, char **argv)
     while(ros::ok())
     {
 	    // go to the first waypoint
-	    pose.pose.position.x = 10.97;
-	    pose.pose.position.y = 4.77;
-	    pose.pose.position.z = 3.5;
+	    pose.pose.position.x = 13.81;
+	    pose.pose.position.y = 8.2;
+	    pose.pose.position.z = 3.0;
 
 	    pose.pose.orientation.x = 0;
 	    pose.pose.orientation.y = 0;
@@ -108,7 +108,7 @@ int main(int argc, char **argv)
 	    pose.pose.orientation.w = 0;
 
 	    ROS_INFO("going to the first way point");
-	    for(int i = 0; ros::ok() && i < 10*20; ++i){
+	    for(int i = 0; ros::ok() && i < 10*25; ++i){
 	      local_pos_pub.publish(pose);
 	      ros::spinOnce();
 	      rate.sleep();
@@ -117,9 +117,9 @@ int main(int argc, char **argv)
 
 
 	    // go to the second waypoint
-	    pose.pose.position.x = -13.08;
-	    pose.pose.position.y = 4.77;
-	    pose.pose.position.z = 3.5;
+	    pose.pose.position.x = -19.19;
+	    pose.pose.position.y = 8.25;
+	    pose.pose.position.z = 3.0;
 
 	    pose.pose.orientation.x = 0;
 	    pose.pose.orientation.y = 0;
@@ -128,7 +128,7 @@ int main(int argc, char **argv)
 
 	    //send setpoints for 10 seconds
 	    ROS_INFO("going to second way point");
-	    for(int i = 0; ros::ok() && i < 10*20; ++i){
+	    for(int i = 0; ros::ok() && i < 10*25; ++i){
 
 	      local_pos_pub.publish(pose);
 	      ros::spinOnce();
@@ -137,9 +137,9 @@ int main(int argc, char **argv)
 	    ROS_INFO("second way point finished!");
 
 	    // go to the third waypoint
-	    pose.pose.position.x = -13.3;
-	    pose.pose.position.y = -4.98;
-	    pose.pose.position.z = 3.5;
+	    pose.pose.position.x = -19.43;
+	    pose.pose.position.y = -7.67;
+	    pose.pose.position.z = 3.0;
 
 	    pose.pose.orientation.x = 0;
 	    pose.pose.orientation.y = 0;
@@ -148,7 +148,7 @@ int main(int argc, char **argv)
 
 	    //send setpoints for 10 seconds
 	    ROS_INFO("going to third way point");
-	    for(int i = 0; ros::ok() && i < 10*20; ++i){
+	    for(int i = 0; ros::ok() && i < 10*25; ++i){
 
 	      local_pos_pub.publish(pose);
 	      ros::spinOnce();
@@ -157,9 +157,9 @@ int main(int argc, char **argv)
 	    ROS_INFO("third way point finished!");
 	    
 	    // go to the forth waypoint
-	    pose.pose.position.x = 10.91;
-	    pose.pose.position.y = -4.82;
-	    pose.pose.position.z = 3.5;
+	    pose.pose.position.x = -14.02;
+	    pose.pose.position.y = -7.89;
+	    pose.pose.position.z = 3.0;
 
 	    pose.pose.orientation.x = 0;
 	    pose.pose.orientation.y = 0;
@@ -168,7 +168,7 @@ int main(int argc, char **argv)
 
 	    //send setpoints for 10 seconds
 	    ROS_INFO("going to forth way point");
-	    for(int i = 0; ros::ok() && i < 10*20; ++i){
+	    for(int i = 0; ros::ok() && i < 10*25; ++i){
 
 	      local_pos_pub.publish(pose);
 	      ros::spinOnce();
